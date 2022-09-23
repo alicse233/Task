@@ -1,0 +1,29 @@
+buildscript {
+    ext {
+        kotlin_version = "1.4.31"
+        apollo_version = "2.5.4"
+        compose_version = "1.0.1"
+        legacy_support_v4_version = '1.0.0'
+        fragment_component_version = '2.3.5'
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.1'
+
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21"
+
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$fragment_component_version"
+
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.38.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
